@@ -1,0 +1,30 @@
+# Catppuccin Mocha: same palette as nvim. tmux uses ANSI names only
+# (black/brightblack, magenta, yellow, red), so these slots define its colors.
+
+background = 1e1e2e
+foreground = cdd6f4
+cursor-color = f5e0dc
+cursor-text = 1e1e2e
+selection-background = 585b70
+selection-foreground = cdd6f4
+
+# black / brightblack: tmux status text + inactive pane border
+palette = 0=#45475a
+palette = 8=#585b70
+# red: tmux bell
+palette = 1=#f38ba8
+palette = 9=#f38ba8
+palette = 2=#a6e3a1
+palette = 10=#a6e3a1
+# yellow: tmux zoomed window
+palette = 3=#f9e2af
+palette = 11=#f9e2af
+palette = 4=#89b4fa
+palette = 12=#89b4fa
+# magenta: tmux active window + active pane border
+palette = 5=#f5c2e7
+palette = 13=#f5c2e7
+palette = 6=#94e2d5
+palette = 14=#94e2d5
+palette = 7=#bac2de
+palette = 15=#a6adc8
