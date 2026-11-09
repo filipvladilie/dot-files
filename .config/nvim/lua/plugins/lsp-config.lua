@@ -17,22 +17,13 @@ return {
     "neovim/nvim-lspconfig",
     lazy = false,
     config = function()
-      local capabilities = require('cmp_nvim_lsp').default_capabilities()
-
-      local lspconfig = require("lspconfig")
-      lspconfig.lua_ls.setup({
-        capabilities = capabilities
-      })
-
-      -- Go
-      lspconfig.gopls.setup({
+      -- Neovim 0.11+ native LSP config; nvim-lspconfig supplies the per-server defaults.
+      vim.lsp.config("*", {
         capabilities = require("cmp_nvim_lsp").default_capabilities(),
       })
 
-      -- Swift
-      lspconfig.sourcekit.setup({
-        capabilities = require("cmp_nvim_lsp").default_capabilities(),
-      })
+      -- lua_ls, Go, Swift
+      vim.lsp.enable({ "lua_ls", "gopls", "sourcekit" })
 
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
       vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
